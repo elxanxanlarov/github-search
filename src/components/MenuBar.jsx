@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { FaGithub } from "react-icons/fa";
-import { GoRepo } from "react-icons/go";
+import { CiGift } from "react-icons/ci";
+import { FaGithub, FaWpexplorer } from "react-icons/fa";
+import { GoCodespaces, GoRepo } from "react-icons/go";
 import { GrHomeRounded } from "react-icons/gr";
-import { IoIosSearch, IoMdClose } from "react-icons/io";
-import { VscIssues } from "react-icons/vsc";
+import { IoIosSearch, IoMdClose, IoMdGitPullRequest } from "react-icons/io";
+import { TiMessages } from "react-icons/ti";
+import { VscGithubProject, VscIssues } from "react-icons/vsc";
 
 const MenuBar = ({active,setMenuAcitve}) => {
   return (
@@ -23,33 +25,33 @@ const MenuBar = ({active,setMenuAcitve}) => {
         </li>
         <li>
           <VscIssues />
-          <p>Home</p>
+          <p>Issues</p>
         </li>
         <li>
-          <VscIssues />
-          <p>Home</p>
+        <IoMdGitPullRequest />
+          <p>Pull requests</p>
         </li>
         <li>
-          <VscIssues />
-          <p>Home</p>
+        <VscGithubProject />
+          <p>Projects</p>
         </li>
         <li>
-          <VscIssues />
-          <p>Home</p>
+        <TiMessages />
+          <p>Discissions</p>
         </li>
         <li>
-          <VscIssues />
-          <p>Home</p>
+        <GoCodespaces />
+          <p>Codespaces</p>
         </li>
 
         <hr />
         <li>
-          <VscIssues />
-          <p>Home</p>
+        <FaWpexplorer />
+          <p>Explore</p>
         </li>
         <li>
-          <VscIssues />
-          <p>Home</p>
+        <CiGift />
+          <p>Marketplace</p>
         </li>
       </ul>
       <div className="head-two dp-between">
