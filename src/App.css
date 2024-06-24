@@ -31,11 +31,49 @@ img{
 li{
     list-style: none;
 }
+.cursor{
+    cursor: pointer;
+}
 /* Header */
 nav{
     padding: 1rem 0;
     background-color:#F6F8FA;
     border-bottom: 1px solid #8a8a8d;
+}
+.menu-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    width: 18rem;
+    z-index: 10000;
+    padding: .7rem;
+    height: 100vh;
+    transform: translateX(-20rem);
+    transition: .5s;
+}
+.menu-bar.active{
+    transform: translateX(0)
+}
+.menu-bar .head{
+    font-size: 2rem;
+}
+.menu-bar .head .close-btn{
+    font-size: .9rem;
+    background-color:#f4f4f4;
+    width:2rem;
+    height:2rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: .3rem;
+}
+.menu-bar ul li{
+    display: flex;
+    align-items:center;
+    gap: .8rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
 }
 nav .nav-left{
     gap: 1rem;
@@ -226,11 +264,11 @@ nav .nav-right .icons-section>div .round-con{
     padding: .2rem .6rem;
     outline-color: blue;
 }
-.home .left-main .home-left ul .repo {
+.reposity-ul .repo {
     gap: .4rem;
     margin: .5rem 0;
 }
-.home .left-main .home-left ul .repo .img-con {
+.reposity-ul .repo .img-con {
     width: 1.4rem;
     border-radius:50%;
     overflow: hidden;
@@ -408,6 +446,39 @@ left: .3rem;
         padding-bottom: 1rem !important;
         margin-top: 1rem;
     }
+    .main-right-con {
+        position: relative;
+    }
+    .main-right-con h1{
+        position: absolute;
+        top: 0;
+    }
+}
+@media screen and (max-width:382px) {
+    nav .nav-left{
+        gap: .5rem;
+    }
+    nav .nav-left .bar-con .bar-icon{
+        font-size: 1.4rem;
+    } 
+    nav .nav-right .icons-section .logo{
+        width: 2.2rem;
+    }
+    nav .nav-left .git-icon{
+        font-size: 1.7rem;
+    }
+    nav .nav-left p {
+        font-size: 1rem;
+    }
+    nav .search-con   .search-text .search-icon{
+        font-size: 1.4rem;
+        height: 1.79rem;
+    }
+    nav .nav-right .icons-section {
+        font-size:1.2rem;
+    }
+    
+  
 }
 @media screen and (max-width:282px) {
     nav .nav-left{

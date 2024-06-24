@@ -5,10 +5,19 @@ import { IoIosSearch, IoMdGitPullRequest } from "react-icons/io";
 import { MdOutlineArrowDropDown, MdOutlineMarkAsUnread } from "react-icons/md";
 import { VscIssues } from "react-icons/vsc";
 import swal from "sweetalert";
+import MenuBar from "./MenuBar";
 
 const Header = ({calluser}) => {
   const [searchActive, setActiveSearch] = useState(false);
   const [inputValue, setInputValue] = useState(null);
+  const[menuActive,setMenuAcitve]=useState(false)
+  if(menuActive=="active"){
+    document.body.style.overflow="hidden"
+
+
+  }else{
+    document.body.style.overflow="auto"
+  }
   const searchSubmit = (e) => {
     e.preventDefault();
 
@@ -21,13 +30,16 @@ const Header = ({calluser}) => {
       }
     }
   };
+
   return (
     <>
       <nav>
+        <MenuBar active={menuActive} setMenuAcitve={setMenuAcitve}/>
+        
         <div className="container-fluid">
           <div className="nav-con dp-between">
             <div className="nav-left dp-align">
-              <div className="bar-con">
+              <div onClick={()=>setMenuAcitve("active")} className="bar-con">
                 <FaBars className="bar-icon" />
               </div>
               <a href="">

@@ -18,7 +18,7 @@ const Home = ({ getData, h1show }) => {
           <div className="home-con">
             <div className="left-main dp-align">
               <div className="home-left">
-                <ul>
+                <ul className="reposity-ul">
                   <li className="dp-between">
                     <p>Top Repositories</p>
                     <button className="btn btn-success">
